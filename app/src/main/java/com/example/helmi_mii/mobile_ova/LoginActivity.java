@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Intent DaftarIntent = new Intent(LoginActivity.this, menu.class);
+                Intent DaftarIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(DaftarIntent);
 
             }

@@ -1,9 +1,12 @@
 package com.example.helmi_mii.mobile_ova;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.imangazaliev.circlemenu.CircleMenu;
@@ -24,14 +27,28 @@ public class menu extends AppCompatActivity {
             {
                 switch (menuButton.getId())
                 {
-                    case R.id.favorite:
-                        showMessage("Favorite");
+                    case R.id.profilPL:
+                        showMessage("Profil"); //menampilkan pesan ketika tombol ditekan
+                        Handler profilh = new Handler(); //handler untuk penahan / pemberi delay
+                        profilh.postDelayed(new Runnable()
+                        {
+                            public void run(){
+                        Intent ProfilIntent = new Intent(menu.this, UserAreaActivity.class); //intent untuk pindah ke layout user area
+                        menu.this.startActivity(ProfilIntent);//memulai activity
+                        }
+                        },800);//lama delay untuk pindah ke layout 800ms = 0,8 detik
+                        break; //berhenti
+                    case R.id.searchPL:
+                        showMessage("Cari");
                         break;
-                    case R.id.search:
-                        showMessage("Search");
+                    case R.id.homePL:
+                        showMessage("Beranda");
                         break;
-                    case R.id.alert:
-                        showMessage("Alert");
+                    case R.id.messagePL:
+                        showMessage("Pesan");
+                        break;
+                    case R.id.settingPL:
+                        showMessage("Pengaturan");
                         break;
                 }
             }
