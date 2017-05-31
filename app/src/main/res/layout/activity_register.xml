@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,10 +8,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.helmi_mii.mobile_ova.RegisterActivity">
+    tools:context="com.example.helmi_mii.mobile_ova.RegisterActivity"
+    android:background="#38ACEC">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="247dp"
         android:layout_height="wrap_content"
         android:id="@+id/etNama"
         android:hint="Nama"
@@ -18,32 +30,38 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daftar"
-        android:id="@+id/etDaftar"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="15dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_gravity="top|center_horizontal"/>
 
-    <EditText
-        android:layout_width="wrap_content"
+        <EditText
+        android:layout_width="247dp"
         android:layout_height="wrap_content"
-        android:id="@+id/etEmail"
-        android:layout_below="@+id/etNama"
+        android:id="@+id/etNomorTelp"
+        android:hint="Nomor Telepon"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/etNama"
-        android:layout_alignEnd="@+id/etNama"
-        android:hint="Email" />
+        android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="15dp"
+        android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
+        <EditText
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEmail"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="15dp"
+            android:hint="Email"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="top|center_horizontal" />
+
+        <EditText
+        android:layout_width="247dp"
         android:layout_height="wrap_content"
         android:id="@+id/etPassword"
         android:layout_below="@+id/etEmail"
@@ -51,28 +69,36 @@
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/etEmail"
         android:layout_alignEnd="@+id/etEmail"
-        android:hint="Password" />
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="15dp"
+        android:hint="Password"
+        android:layout_gravity="top|center_horizontal"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/etRePassword"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Re-Type Password" />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etJenisKel"
+            android:layout_below="@+id/etEmail"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/etEmail"
+            android:layout_alignEnd="@+id/etEmail"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="15dp"
+            android:hint="Gender"
+            android:layout_gravity="top|center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="171dp"
         android:layout_height="wrap_content"
-        android:id="@+id/etNomorTelp"
-        android:layout_above="@+id/etDaftar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/etRePassword"
-        android:layout_alignEnd="@+id/etRePassword"
-        android:hint="Nomor Telepon" />
+        android:text="Daftar"
+        android:id="@+id/etDaftar"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

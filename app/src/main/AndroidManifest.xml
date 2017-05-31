@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.helmi_mii.mobile_ova">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +19,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
         <activity android:name=".menu" />
-        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".SplashScreen" />
+        <activity android:name=".menu_2"></activity>
     </application>
 
 </manifest>
